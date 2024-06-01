@@ -1,4 +1,4 @@
-.footer{
+.footer {
     position: fixed;
     bottom: 0;
     font-size: 1.5em;
@@ -7,8 +7,37 @@
     width: 100%;
     background-color: #f7ca18;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.item{
-    margin: 50px;
+.item {
+    margin: 20px;
+    flex: 1 1 200px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: row;
+        font-size: 1.2em;
+    }
+
+    .item {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        overflow: hidden;
+        width: 100%;
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .item {
+        margin: 5px;
+        flex: 1 1 150px;
+    }
 }
